@@ -1,108 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="20dp"
-    android:background="#FFFFFF">
+    tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ToS Helper"
-        android:textSize="32sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:textColor="#000080"
-        android:layout_marginBottom="20dp" />
+        android:text="Tos helper!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="15dp"
-        android:gravity="center_vertical">
-
-        <Button
-            android:id="@+id/btnItalia"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginEnd="5dp"
-            android:text="Italia"
-            android:backgroundTint="#000080"
-            android:textColor="#FFFFFF" />
-
-        <EditText
-            android:id="@+id/etAltro"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1.5"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp"
-            android:hint="Altro (Scrivi qui)"
-            android:inputType="textCapWords"
-            android:maxLines="1"
-            android:minHeight="48dp"/>
-
-        <Button
-            android:id="@+id/btnApplicaAltro"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Applica"
-            android:backgroundTint="#000080"
-            android:textColor="#FFFFFF" />
-
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/tvStatoSelezionato"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Nazione selezionata: Nessuna"
-        android:textStyle="italic"
-        android:textColor="#333333"
-        android:layout_marginBottom="15dp" />
-
-    <EditText
-        android:id="@+id/etInputTos"
-        android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:hint="Incolla qui i Termini di Servizio (ToS)..."
-        android:gravity="top|start"
-        android:inputType="textMultiLine"
-        android:scrollbars="vertical"
-        android:background="#dfe6f0"
-        android:padding="10dp"
-        android:layout_marginBottom="15dp" />
-
-    <Button
-        android:id="@+id/btnAnalizza"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:backgroundTint="#093a8f"
-        android:text="Analizza"
-        android:textColor="#FFFFFF" />
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#dfe6f0"
-        android:fillViewport="true">
-
-        <TextView
-            android:id="@+id/tvRispostaAi"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textIsSelectable="true"
-            android:textColor="#000000"
-            android:padding="10dp"
-            android:hint="Il risultato dell'analisi comparirà qui...">
-
-        </TextView>
-
-    </ScrollView>
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
